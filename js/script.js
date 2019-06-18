@@ -1,7 +1,6 @@
 $(document).ready(function() {
   $('.slider-one').slick({
       dots: true,
-      // dotsClass: '.slider-dots',
       adaptiveHeight: true,
       arrows: false,
       autoplay: true,
@@ -16,17 +15,11 @@ $(document).ready(function() {
       focusOnSelect: true
   });
   $('.slider-two').slick({
-        dots: true,
-        slidesToShow: 3,
-        autoplay: true,
-        autoplaySpeed: 2000
-
+      dots: true,
+      slidesToShow: 3,
+      autoplay: true,
+      autoplaySpeed: 2000
   });
-
-
-
-
-  
 });
 
 function initMap() {
@@ -215,7 +208,7 @@ function initMap() {
      ]
   });
 
-  let image = '../img/marker.png';
+  let image = './img/marker.png';
   let marker = new google.maps.Marker({
     position: geo,
     map: map,

@@ -420,8 +420,8 @@ body{
 		}
 	}
 	&__img {
-		width: 630px;
-		height: 470px;
+		max-width: 630px;
+		max-height: 470px;
 		width: 100%;
 		z-index: 2;
 		position: relative;
@@ -472,6 +472,7 @@ body{
 		&:active,
 		&:focus {
 			box-shadow: -1px -1px 21px 0px rgba(55, 50, 50, 0.67);
+			color: $link-color;
 		}
 	}
 	&__locate {
@@ -610,10 +611,12 @@ body{
 		display: inline-block;
 		text-align: center;
 		font-size: 1.4rem;
+		@include tr();
 		&:hover,
 		&:active,
 		&:focus {
 			box-shadow: -1px -1px 21px 0px rgba(55, 50, 50, 0.67);
+			color: $link-color;
 		}
 	}
 	&__main {
@@ -639,21 +642,29 @@ body{
 		}
 	&__pic2 {
 			grid-area: 1 / 3 / 2 / 4;
-			overflow: hidden;
 		}
 	&__pic3 {
 			grid-area: 1 / 4 / 2 / 5;
-			overflow: hidden;
 		}
 	&__pic4 {
 			grid-area: 2 / 3 / 3 / 4;
-			overflow: hidden;
 		}
 	&__pic5 {
 			grid-area: 2 / 4 / 3 / 5;
-			overflow: hidden;
 		}
-
+	&__pic2,
+	&__pic3,
+	&__pic4,
+	&__pic5 {
+		overflow: hidden;
+		background-color: #fff;
+		@include tr();
+		&:hover,
+		&:active,
+		&:focus {
+			opacity: .3;
+		}
+	}
 }
 
 
@@ -702,10 +713,12 @@ body{
 		text-align: center;
 		background-color: rgba(255,255,255, .99);
 		cursor: pointer;
+		@include tr();
 		&:hover,
 		&:active,
 		&:focus {
 			box-shadow: -1px -1px 21px 0px rgba(55, 50, 50, 0.67);
+			color: $link-color;
 		}
 	}
 	&__item {
