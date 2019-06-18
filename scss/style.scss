@@ -755,8 +755,13 @@ body{
 		border-bottom: 1px solid rgba(0, 0, 0, .2);
 		color: $text-color;
 		&::placeholder {
-			color: $text-light-color;
-			// font-size: 1.8rem;	
+			text-indent: 0px;
+			transition: text-indent 1000ms;
+			color: #4b5562;
+		}
+		&:active::placeholder,
+		&:focus::placeholder {
+			text-indent: 1000px;
 		}
 		&:active,
 		&:focus {

@@ -1068,15 +1068,45 @@ body {
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     color: #2c4058; }
     .form__name::-webkit-input-placeholder, .form__email::-webkit-input-placeholder {
+      text-indent: 0px;
+      -webkit-transition: text-indent 1000ms;
+      -o-transition: text-indent 1000ms;
+      transition: text-indent 1000ms;
       color: #4b5562; }
     .form__name::-moz-placeholder, .form__email::-moz-placeholder {
+      text-indent: 0px;
+      -webkit-transition: text-indent 1000ms;
+      -o-transition: text-indent 1000ms;
+      transition: text-indent 1000ms;
       color: #4b5562; }
     .form__name:-ms-input-placeholder, .form__email:-ms-input-placeholder {
+      text-indent: 0px;
+      -webkit-transition: text-indent 1000ms;
+      -o-transition: text-indent 1000ms;
+      transition: text-indent 1000ms;
       color: #4b5562; }
     .form__name::-ms-input-placeholder, .form__email::-ms-input-placeholder {
+      text-indent: 0px;
+      -webkit-transition: text-indent 1000ms;
+      -o-transition: text-indent 1000ms;
+      transition: text-indent 1000ms;
       color: #4b5562; }
     .form__name::placeholder, .form__email::placeholder {
+      text-indent: 0px;
+      -webkit-transition: text-indent 1000ms;
+      -o-transition: text-indent 1000ms;
+      transition: text-indent 1000ms;
       color: #4b5562; }
+    .form__name:active::-webkit-input-placeholder, .form__name:focus::-webkit-input-placeholder, .form__email:active::-webkit-input-placeholder, .form__email:focus::-webkit-input-placeholder {
+      text-indent: 1000px; }
+    .form__name:active::-moz-placeholder, .form__name:focus::-moz-placeholder, .form__email:active::-moz-placeholder, .form__email:focus::-moz-placeholder {
+      text-indent: 1000px; }
+    .form__name:active:-ms-input-placeholder, .form__name:focus:-ms-input-placeholder, .form__email:active:-ms-input-placeholder, .form__email:focus:-ms-input-placeholder {
+      text-indent: 1000px; }
+    .form__name:active::-ms-input-placeholder, .form__name:focus::-ms-input-placeholder, .form__email:active::-ms-input-placeholder, .form__email:focus::-ms-input-placeholder {
+      text-indent: 1000px; }
+    .form__name:active::placeholder, .form__name:focus::placeholder, .form__email:active::placeholder, .form__email:focus::placeholder {
+      text-indent: 1000px; }
     .form__name:active, .form__name:focus, .form__email:active, .form__email:focus {
       border-bottom: 1px solid #4b5562; }
   .form__email {
