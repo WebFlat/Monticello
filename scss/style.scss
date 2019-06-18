@@ -51,6 +51,7 @@ html {
 	font-size: 10px;
 	height: 100%;
 	scroll-behavior: smooth;
+	user-select: initial;
 }
 
 body{
@@ -272,38 +273,51 @@ body{
 	margin: 0;
 	padding: 0;
 	position: absolute;
-	right: 1%;
-	top: 47%;
+	right: 3%;
+	top: 50%;
 	transform: translate(-50%, -50%);
 	li {
 		display: block;
-		margin: 10px;
+		margin: 20px 0;
 	}
 
 	button {
 		outline: none;
 		background-color: transparent;
 		font-size: 0;
-		width: 8px;
-		height: 8px;
+		width: 10px;
+		height: 10px;
 		padding: 0;
 		border: 1px solid #fff;
 		border-radius: 50%;
 		cursor: pointer;
+		@include tr();
+		&:hover,
+		&:active,
+		&:focus {
+			background-color: #fff;
+		}
+	}
+	.slick-active button {
+		background-color: #fff;
 	}
 }
 
 
 //Slider-two 
 .slider-two {
+	padding: 0 60px;
 	display: inline-block;
 	width: 100%;
+	margin: 0 auto;
 	.slick-dots {
+		text-align: center;
 		margin: 0;
 		padding: 0;
 		position: absolute;
-		left: 58%;
+		left: 50%;
 		top: 110%;
+		right: 0;
 		transform: translate(-50%, -50%);
 		li {
 			display: inline-block;
@@ -321,7 +335,7 @@ body{
 	height: 4rem;
 	border-radius: 50%;
 	display: inline-block;
-	z-index: 1;
+	z-index: 2;
 	top: 50%;
 	transform: translateY(-50%);
 	background-color: transparent;
@@ -341,7 +355,7 @@ body{
 		transform: translateY(-50%) scale(1.2);
 	}
 	&.slick-prev {
-		left: -7%;
+		left: 0;
 		transform: translateY(-50%) rotate(180deg);
 		&:hover,
 		&:active,
@@ -352,7 +366,7 @@ body{
 	}
 
 	&.slick-next {
-		right: -7%;
+		right: 0;
 	}
 	
 }
@@ -373,38 +387,50 @@ body{
 	overflow: hidden;
 	&__main {
 		display: flex;
-		// flex-wrap: wrap;
 		position: relative;
 		margin: 70px auto 0 auto;
 		&--second {
-			flex-direction: row-reverse;
 			margin: 210px auto 0 auto;
+		}
+	}
+	&__pic {
+		width: 53%;
+		position: relative;
+		&::before {
+			content: '';
+			display: block;
+			position: absolute;
+			background-color: #55b7ff;
+			width: 800px;
+			height: 100%;
+			bottom: 15%;
+			right: 50%;
+		}
+		&--second {
+			&::before {
+				background-color: #7e5aff;
+				right: -75%;
+				bottom: 15%;
+				content: '';
+				display: block;
+				position: absolute;
+				width: 800px;
+				height: 100%;
+			}
 		}
 	}
 	&__img {
 		width: 630px;
 		height: 470px;
-		// max-width: 100%;
+		width: 100%;
 		z-index: 2;
 		position: relative;
 	}
-	&__block-fill {
-		width: 800px;
-		height: 470px;
-		background-color: #55b7ff;
-		position: absolute;
-		left: -37%;
-		top: -15%;
-		&--second {
-			background-color: #7e5aff;
-			left: 70%;
-		}
-	}
 	&__content {
-		width: 45%;
-		padding: 65px 5px 5px 70px;
+		width: 47%;
+		padding: 60px 20px 5px 70px;
 		&--second {
-			padding: 65px 55px 5px 0;
+			padding: 60px 70px 5px 20px;
 
 		}
 	}
@@ -534,7 +560,7 @@ body{
 		overflow: hidden;
 	}
 	&__container {
-		padding: 30px 20px;
+		padding: 30px 20px 30px 10px;
 	}
 	&__avatar {
 		width: 60px;
@@ -545,6 +571,7 @@ body{
 	&__bottom {
 		display: flex;
 		font-family: 'GothamBook';
+		min-height: 80px;
 	}
 	&__name {
 		margin: 15px 0 0 0;
@@ -646,10 +673,10 @@ body{
 	width: 800px;
 	padding: 60px 60px 40px 60px;
 	margin: 0 auto;
-	font-family: 'GothamBook';
+	font-family: 'Open Sans', sans-serif;
 	color: $text-color;
-	outline: 1px solid #000;
-	font-size: 1.8rem;
+	border: 1px solid #000;
+	font-size: 1.9rem;
 	&__data {
 		display: flex;
 	}
@@ -666,13 +693,14 @@ body{
 		padding-left: 40px;
 	}
 	&__btn {
+		font-family: 'GothamBook';
 		text-transform: uppercase;
 		display: inline-block;
 		width: 140px;
 		align-self: flex-end;
-		padding: 20px 5px 10px 5px;
+		padding: 20px 5px 5px 5px;
 		text-align: center;
-		background-color: #fff;
+		background-color: rgba(255,255,255, .99);
 		cursor: pointer;
 		&:hover,
 		&:active,
@@ -685,8 +713,10 @@ body{
 		font-style: normal;
 		text-decoration: none;
 		color: $text-color;
+		@include tr();
 		&--email,
-		&--tel {
+		&--tel,
+		&--addr {
 			&:hover,
 			&:focus,
 			&:active {
@@ -713,7 +743,7 @@ body{
 		color: $text-color;
 		&::placeholder {
 			color: $text-light-color;
-			font-size: 1.8rem;	
+			// font-size: 1.8rem;	
 		}
 		&:active,
 		&:focus {
