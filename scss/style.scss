@@ -505,7 +505,6 @@ body{
 
 
 //Block News 
-
 .news {
 	background: linear-gradient(45deg, rgba(60, 27, 212, .9), rgba(36, 204, 250, .9)), url(../img/city.png);
 	background-position: bottom;
@@ -708,8 +707,9 @@ body{
 		text-transform: uppercase;
 		display: inline-block;
 		width: 140px;
+		font-size: 1.4rem;
 		align-self: flex-end;
-		padding: 20px 5px 5px 5px;
+		padding: 20px 5px 10px 5px;
 		text-align: center;
 		background-color: rgba(255,255,255, .99);
 		cursor: pointer;

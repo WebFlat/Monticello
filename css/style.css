@@ -1028,9 +1028,10 @@ body {
     text-transform: uppercase;
     display: inline-block;
     width: 140px;
+    font-size: 1.4rem;
     -ms-flex-item-align: end;
     align-self: flex-end;
-    padding: 20px 5px 5px 5px;
+    padding: 20px 5px 10px 5px;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.99);
     cursor: pointer;

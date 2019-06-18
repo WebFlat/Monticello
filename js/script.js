@@ -5,12 +5,12 @@ $(document).ready(function() {
       arrows: false,
       autoplay: true,
       draggable: true,
-      // vertical: true,
       verticalSwiping: true,
       swipeToSlide: true,
       infinite: true,
       speed: 500,
       fade: true,
+      autoplaySpeed: 6000,
       cssEase: 'linear',
       focusOnSelect: true
   });
@@ -18,7 +18,7 @@ $(document).ready(function() {
       dots: true,
       slidesToShow: 3,
       autoplay: true,
-      autoplaySpeed: 2000
+      autoplaySpeed: 4000
   });
 });
 
@@ -208,11 +208,10 @@ function initMap() {
      ]
   });
 
-  let image = './img/marker.png';
   let marker = new google.maps.Marker({
     position: geo,
     map: map,
-    icon: image,
+    icon: './img/marker.png',
     title: '91 Nolan'
   });
 }
