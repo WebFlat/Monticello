@@ -625,6 +625,10 @@ body{
 		grid-template-rows: 1fr 1fr;
 		grid-column-gap: 10px;
 		grid-row-gap: 10px;
+	}
+	&__iframe {
+		width: 100%;
+		height: 100%;
 	}	
 	&__pic1 {
 			grid-area: 1 / 1 / 3 / 3;
