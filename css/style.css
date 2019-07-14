@@ -1121,6 +1121,8 @@ body {
   height: 755px;
   width: 100%;
   background-color: grey; }
+  .map h5 {
+    display: none; }
 
 .footer {
   font-family: 'GothamBook';
